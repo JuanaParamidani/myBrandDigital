@@ -1,0 +1,178 @@
+/*VARIABLES*/
+
+$medida1: 20px;
+$colorWhite: white;
+
+h1 {
+	color: pink;
+	font-family: 'Volkhov', serif;
+	font-size: $medida1;
+	padding: 10px;
+	animation: aparecer 2s alinear infinite;
+
+}
+	@keyframes aparecer {
+	0% {
+		opacity:0;
+	}
+
+	50% {
+		opacity: 1;
+
+	}
+	100% { 
+		opacity: 0;
+
+	}
+
+}
+
+em {
+	position: relative;
+	top: -25px;
+	left:15px;
+}
+
+.parrafoDos {
+	color: black;
+   font-family: 'Playfair Display', serif;
+   font-size:$medida1;
+}
+
+
+.parrafoSubrayado {
+	text-decoration: underline;
+	color: $colorWhite;
+	font-family: Volkhov, serif;
+	font-size: $medida1;
+}
+
+
+.tituloTresDif {
+	color: brown;
+	font-family: 'Volkhov', serif;
+	font-size: $medida1;
+}
+
+.tituloCuatro {
+	color: black;
+	font-family: 'Volkhov', serif;
+	font-size: $medida1;
+}
+
+ul {
+
+	li {
+	color: #FF69B4;
+	display: inline-block;
+	padding: 5px;
+	list-style: none;
+	}
+	.trabajos {
+	display: flex; flex-direction: row;
+	justify-content: space-evenly; 
+	}
+	.navbar  {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	border: solid 1px black; 
+	}
+}	
+
+ol {
+ 	li {
+	color: blue;
+	}
+}
+
+.thPrimeros {
+	color: orange;
+	font-family: 'Cookie', cursive;
+}	
+
+header {
+	width: 100%;
+	background:$colorWhite;
+}
+
+#btn-menu {	
+	display: none;
+}
+
+
+
+li {
+	.navbar {
+	border-right: 1px solid #fff;
+	border:solid 1px black;
+	text-align: center;
+	flex-grow: 1;
+	}
+}	
+
+	.navbar li:hover {
+	background: $colorWhite;
+	transform: translateY(-10px);
+	}	
+
+	.navbar li a {
+	display: block;
+	padding:15px 20px;
+	color: white;
+	text-decoration: none;
+}	
+
+
+	.contenido__inicio1 {
+	background-color: pink;
+	grid-area: contenidoinicio1;
+
+}	 
+	
+ .quienesSomos {
+	background-color: #fcbfb2;
+	grid-area: quienesSomos; 
+}
+
+
+.trabajos1 {
+	background-color: #ffa895;
+	grid-area: trabajos1;
+}
+
+.imagenDerecha {
+	float: left;
+	padding: 10px;
+	margin:40px;
+	width: 300px;
+
+}
+
+.imagenIzquierda {
+	float: left;
+	padding: 10px;
+	margin: 40px;
+	width: 300px;
+}	
+
+footer 	{
+	background-color: #f1ccc7;
+	grid-area: footer;
+}
+
+.contenedor__main {
+	display:grid;
+	grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(autofit, minmax (500px,1000px));
+	grid-column-gap:10px;
+	grid-row-gap: 10px; 
+	grid-template-areas: "inicio1 inicio1 inicio1 inicio1 inicio1 inicio1"
+						 "quienesSomos quienesSomos quienesSomos quienesSomos quienesSomos quienesSomos"
+						 "servicios1 servicios1 servicios1 servicios1 servicios1 servicios1"
+						 "trabajos1 trabajos1 trabajos1 trabajos1 trabajos1 trabajos1"
+						 "footer footer footer footer footer footer"
+
+}
+
