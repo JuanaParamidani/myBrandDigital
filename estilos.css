@@ -1,0 +1,185 @@
+	
+
+
+h1 {
+	color: pink;
+	font-family: 'Volkhov', serif;
+	font-size: 20px;
+	padding: 10px
+	animation: aparecer 2s linear infinite;
+
+}
+	@keyframes aparecer {
+	0% {
+		opacity:0;
+	}
+
+	50% {
+		opacity: 1;
+
+	}
+	100% { 
+		opacity: 0;
+
+	}
+
+}
+
+em {
+	position: relative;
+	top: -25px;
+	left:15px;
+}
+
+.parrafoDos {
+	color: black;
+   font-family: 'Playfair Display', serif;
+   font-size: 20px;
+}
+
+
+.parrafoSubrayado {
+	text-decoration: underline;
+	color: white;
+	font-family: Volkhov, serif;
+	font-size: 20px;
+}
+
+
+.tituloTresDif {
+	color: brown;
+	font-family: 'Volkhov', serif;
+	font-size: 20px;
+}
+
+.tituloCuatro {
+	color: black;
+	font-family: 'Volkhov', serif;
+	font-size: 20px;
+}
+
+ul li {
+	color: #FF69B4;
+	display: inline-block;
+	padding: 5px;
+	list-style: none;
+}
+
+ol li {
+	color: blue;
+}
+
+.thPrimeros {
+	color: orange;
+	font-family: 'Cookie', cursive;
+}	
+
+header {
+	width: 100%;
+	background:white;
+}
+
+#btn-menu {	
+	display: none;
+}
+
+.navbar ul  {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	border: solid 1px black; 
+}
+
+.navbar li{
+	border-right: 1px solid #fff;
+	border:solid 1px black;
+	text-align: center;
+	flex-grow: 1;
+}	
+
+
+.navbar li:hover {
+	background: white;
+	transform: translateY(-10px);
+}	
+
+.navbar li a {
+	display: block;
+	padding:15px 20px;
+	color: white;
+	text-decoration: none;
+}	
+
+
+ul li .trabajos {
+	display: flex; flex-direction: row;
+	justify-content: space-evenly; 
+}
+
+ .inicio1 {
+	background-color: pink;
+	grid-area: inicio1;
+
+}	 
+	
+ .quienesSomos {
+	background-color: #fcbfb2;
+	grid-area: quienesSomos; 
+}
+
+
+.trabajos1 {
+	background-color: #ffa895;
+	grid-area: trabajos1;
+}
+
+img {
+	grid-area: img;
+	max-height: 100%;
+	max-width:100%;
+}
+
+footer 	{
+	background-color: #f1ccc7;
+	grid-area: footer;
+}
+
+main {
+	display:grid;
+	grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr
+	grid-template-rows: repeat(autofit, minmax (500px,1000px));
+	grid-column-gap:10px;
+	grid-row-gap: 10px; 
+	grid-template-areas: "inicio1 inicio1 inicio1 inicio1 inicio1 inicio1"
+						 "quienesSomos quienesSomos quienesSomos quienesSomos quienesSomos quienesSomos"
+						 "servicios1 servicios1 servicios1 servicios1 servicios1 servicios1"
+						 "trabajos1 trabajos1 trabajos1 trabajos1 trabajos1 trabajos1"
+						 "footer footer footer footer footer footer"
+
+}
+
+@media screen and (max-width: < 576px) {
+	#body {
+        width: 90%;
+    }
+	#header {
+        width: 90%;
+    }
+    #main {
+        width: 90%;
+    }
+    
+    #section {
+        width: 90%;
+    }
+
+    #navbar {
+        width: 90%;
+    }
+
+    #footer {
+        width: 90%;
+    }
+
+}
